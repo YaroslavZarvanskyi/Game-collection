@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Game Vault | Manager</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>🎮 Game Vault</h1>
+            <p class="subtitle">Управління вашою цифровою колекцією</p>
+        </header>
+        
+        <div class="controls">
+            <input type="text" id="nameInput" placeholder="Назва гри або DLC...">
+            <div class="button-group">
+                <button class="btn-primary" onclick="handleCreateBase()">+ Базова гра</button>
+                <button class="btn-secondary" onclick="handleCreateExp()">+ Доповнення</button>
+            </div>
+        </div>
+
+        <div class="stats-panel">
+            <h3>Колекція: <span id="collNameDisplay"></span></h3>
+            <div class="stats-grid">
+                <div class="stat-item">Всього: <b id="total">0</b></div>
+                <div class="stat-item">Ігри: <b id="baseCount">0</b></div>
+                <div class="stat-item">DLC: <b id="expCount">0</b></div>
+            </div>
+        </div>
+
+        <div id="output" class="game-list"></div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
